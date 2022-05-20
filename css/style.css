@@ -1,0 +1,144 @@
+/*RESET (QUITAR TODOS LOS FORMATOS AL HTML)*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*LOS PADDING INTERNOS NO VAN A MODIFICAR EL TAMAÑO DE LA CAJA */
+    color: initial;
+}
+
+.contenedor{
+    display: grid;
+    /*Propiedad grid-areas*/
+   /* grid-template-areas: "header header  "
+                         "main main "
+                         "aside section "
+                         "footer footer ";*/
+} 
+    
+header{
+    position: sticky;
+    top: 0;
+    background-color:brown;
+   /* grid-area: header;*/
+
+}
+/*aside{
+    grid-area: aside;
+}
+section{
+    grid-area: section;
+}
+section2{
+    grid-area: section2;
+}
+section3{
+    grid-area: section3;
+}*/
+
+header h1{
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 50px;
+    font-weight: 1000;
+    font-family: 'Square Peg', cursive;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+/* Estilos del menu*/
+.menu{
+    display: flex;
+    background-color:brown;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    z-index: 1;
+   
+    
+}
+
+.menu ul li{
+    list-style-type: none ; /*QUITAR VIÑETAS */
+    display: inline-block; /*CAMBIAR DE BLOQUE A LINEA */
+    color: whitesmoke;
+    font-size: 20px; 
+    margin: 5px;
+    position: relative;
+}
+
+.menu ul li:hover{
+    background-color: rgba(100, 27, 27, 0.589);
+    padding: 2px;
+    font-weight: bold;
+
+    
+}
+
+/* Estilos del sub-menu*/
+.sub-menu{
+    background-color: rgba(124, 34, 34, 0.589);
+    padding: 10px;
+}
+
+.menu ul ul{
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover > ul{
+    display: block;
+}
+
+
+/* Estilos del main*/
+
+
+main h2{
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+
+}
+
+main p{
+    font-size: 15px;
+    text-align: center;
+    overflow: auto; /* PERMITE ESTILIZAR LOS PARRAFOS DE DIFERENTES MANERAS*/
+}
+
+main .parrafo-dos{
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+    overflow: auto;
+}
+
+/* Estilos de las imagenes*/
+.imagenes{
+    background-color: beige;
+    height: 1500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+/* Propiedades para alinear */
+    justify-items: center;
+    align-items: center;
+}   
+
+
+
+
+
+
+/* Estilos de footer */
+footer h3, h4{
+    margin: 20px;
+    font-size: 10px;
+    text-align: center;
+    grid-area: footer;
+}
+
